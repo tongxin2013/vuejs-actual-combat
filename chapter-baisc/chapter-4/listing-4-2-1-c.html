@@ -6,7 +6,8 @@
 </head>
 <body>
 <div id="app">
-    <div :class="classes">此demo存在问题</div>
+    <div :class="classes">Class绑定</div>
+    <p>demo与书中内容有出入，绑定一个返回对象的计算属性为重点</p>
 </div>
 <script src="../../assets/scripts/vue.min.js"></script>
 <script>
@@ -14,14 +15,14 @@
         el: '#app',
         data: {
             isAcitve: true,
-            error: false
+            error: null
         },
         computed: {
             classes: function () {
                 console.log(typeof (this.error))
                 return {
                     active: this.isAcitve && !this.error,
-                    // 'text-fail': !this.error && this.error.type === 'fail'
+                    'text-fail': !this.error && typeof(this.error) === 'boolean'
                 }
             }
         }
