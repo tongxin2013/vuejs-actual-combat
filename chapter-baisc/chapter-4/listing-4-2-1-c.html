@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>绑定class的几种方式</title>
+</head>
+<body>
+<div id="app">
+    <div :class="classes">此demo存在问题</div>
+</div>
+<script src="../../assets/scripts/vue.min.js"></script>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            isAcitve: true,
+            error: false
+        },
+        computed: {
+            classes: function () {
+                console.log(typeof (this.error))
+                return {
+                    active: this.isAcitve && !this.error,
+                    // 'text-fail': !this.error && this.error.type === 'fail'
+                }
+            }
+        }
+    })
+</script>
+</body>
+</html>

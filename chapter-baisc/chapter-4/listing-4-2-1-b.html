@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>绑定class的几种方式</title>
+</head>
+<body>
+<div id="app">
+    <div class="static" :class="{'acitve': isAcitve, 'error': isError}"></div>
+</div>
+<script src="../../assets/scripts/vue.min.js"></script>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            isAcitve: true,
+            isError: false
+        }
+    })
+</script>
+</body>
+</html>

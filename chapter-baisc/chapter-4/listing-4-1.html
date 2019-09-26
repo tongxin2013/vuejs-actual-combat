@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>了解v-bind指令</title>
+</head>
+<body>
+<div id="app">
+    <a v-bind:href="url">链接</a>
+    <img v-bind:src="imgUrl" alt="">
+    <!--缩写为-->
+    <a :href="url">链接</a>
+    <img :src="imgUrl" alt="">
+</div>
+<script src="../../assets/scripts/vue.min.js"></script>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            url: 'www.github.com',
+            imgUrl: 'http://xxx.xxx.xx/img.png'
+        }
+    })
+</script>
+</body>
+</html>
