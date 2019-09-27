@@ -2,18 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>绑定class的几种方式-对象语法</title>
+    <title>绑定内联样式</title>
 </head>
 <body>
 <div id="app">
-    <div :class="{'acitve' : isAcitve}"></div>
+    <div :style="styles">文本</div>
 </div>
+
 <script src="../../assets/scripts/vue.min.js"></script>
 <script>
     var app = new Vue({
         el: '#app',
         data: {
-            isAcitve: true
+            styles: {
+                color: 'red',
+                fontSize: 14 + 'px'
+            }
         }
     })
 </script>

@@ -2,18 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>绑定class的几种方式-对象语法</title>
+    <title>绑定class的几种方式-数组语法</title>
 </head>
 <body>
 <div id="app">
-    <div :class="{'acitve' : isAcitve}"></div>
+    <div :class="[activeCls, errorCls]"></div>
 </div>
+
 <script src="../../assets/scripts/vue.min.js"></script>
 <script>
     var app = new Vue({
         el: '#app',
         data: {
-            isAcitve: true
+            activeCls: 'active',
+            errorCls: 'error'
         }
     })
 </script>
