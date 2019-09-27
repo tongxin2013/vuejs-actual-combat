@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>基本指令-v-once</title>
+</head>
+<body>
+<div id="app">
+
+    <p>定义了v-once的元素:</p>
+    <span v-once>{{message}}</span>
+    <p>定义了v-once的组件:</p>
+    <div v-once>
+        <span>{{message}}</span>
+    </div>
+    <p>未定义v-once的元素:</p>
+    <p>{{message}}</p>
+    <div>
+        <input type="text" v-model="message" name="">
+    </div>
+</div>
+<script src="../../assets/scripts/vue.min.js"></script>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            message: '这是一段文本'
+        }
+    })
+</script>
+</body>
+</html>
