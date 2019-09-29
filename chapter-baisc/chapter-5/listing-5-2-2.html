@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>v-if、v-else-if、v-else</title>
+</head>
+<body>
+<div id="app">
+    <p v-show="status === 1">当status为1时显示该行</p>
+</div>
+<script src="../../assets/scripts/vue.min.js"></script>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            status: 2
+        }
+    })
+</script>
+</body>
+</html>
