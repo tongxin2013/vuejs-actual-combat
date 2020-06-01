@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>列表循环指令v-for-基本用法</title>
+</head>
+<body>
+<div id="app">
+    <p>v-for遍历可选参数键名和索引</p>
+    <ul>
+        <li v-for="(value, key, index) in user">
+          {{ index }} - {{ key }} : {{ value }}
+        </li>
+    </ul>
+</div>
+<script src="../../assets/scripts/vue.min.js"></script>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            user: {
+              name: 'Aresn',
+              gender: '男',
+              age: 26
+            }
+        }
+    })
+</script>
+</body>
+</html>
