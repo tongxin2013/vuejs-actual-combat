@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>数组更新</title>
+</head>
+<body>
+<div id="app">
+  <p>push() -- 向数组的末尾添加一个或多个元素，并返回新的长度</p>
+  <p>pop() -- 删除并返回数组的最后一个元素</p>
+  <p>shift() -- 把数组的第一个元素从其中删除，并返回第一个元素的值</p>
+  <p>unshift() -- 向数组的开头添加一个或更多元素，并返回新的长度</p>
+  <p>splice() -- 向/从数组中添加/删除项目，然后返回被删除的项目</p>
+  <p>sort() -- 对数组的元素进行排序</p>
+  <p>reverse() -- 颠倒数组中元素的顺序</p>
+  <ul>
+    <template v-for="book in books">
+      <li>书名:{{ book.name }}</li>
+      <li>作者:{{ book.author }}</li>
+    </template>
+  </ul>
+</div>
+<script src="../../assets/scripts/vue.min.js"></script>
+<script>
+  var app = new Vue({
+    el: '#app',
+    data: {
+      books: [
+        {name: '《Vue.js实战》',
+          author: '梁灏'
+        },
+        {name: '《JavaScript语言精粹》',
+          author: 'Douglas Crockford'
+        },
+        {name: '《JavaScript高级程序涉及》',
+          author: 'Nicholas C.zakas'
+        }
+      ]
+    }
+  })
+
+  app.books.push({
+    name: '《CSS揭秘》',
+    author: '[希] Lea Verou'
+  })
+
+</script>
+</body>
+</html>
