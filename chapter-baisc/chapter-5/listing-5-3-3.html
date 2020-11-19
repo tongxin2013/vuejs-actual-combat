@@ -2,15 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>数组更新</title>
+  <title>过滤与排序</title>
 </head>
 <body>
 <div id="app">
-  <p>filter() -- 符合条件的所有元素</p>
-  <p>concat() -- 用于连接两个或多个数组</p>
-  <p>slice() -- 从已有的数组中返回选定的元素</p>
   <ul>
-    <template v-for="book in books">
+    <template v-for="book in sortedBooks">
       <li>书名:{{ book.name }}</li>
       <li>作者:{{ book.author }}</li>
     </template>
@@ -32,13 +29,21 @@
           author: 'Nicholas C.zakas'
         }
       ]
+    },
+    // 不改变原数组，通过一个数组的副本做过滤和排序时可使用计算属性
+    computed: {
+      // filterBooks: function () {
+      //   return this.books.filter(function (book) {
+      //     return book.name.match(/JavaScript/)
+      //   })
+      // },
+      sortedBooks: function () {
+        return this.books.sort(function (a, b) {
+          return a.name.length < b.name.length
+        })
+      }
     }
   })
-
-  app.books = app.books.filter(function (item) {
-    return item.name.match(/JavaScript/)
-  })
-
 </script>
 </body>
 </html>
