@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>基本方法</title>
+</head>
+<body>
+<div id="app">
+  点击次数：{{ counter }}
+  <button @click="handleAdd()">+ 1</button>
+  <button @click="handleAdd(10)">+ 10</button>
+</div>
+<script src="../../assets/scripts/vue.min.js"></script>
+<script>
+  var app = new Vue({
+    el: '#app',
+    data: {
+      counter: 0
+    },
+    methods: {
+      handleAdd: function(count) {
+        count = count || 1
+        this.counter += count
+      }
+    }
+  })
+</script>
+</body>
+</html>
