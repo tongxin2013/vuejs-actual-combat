@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>基本方法</title>
+</head>
+<body>
+<div id="app">
+  <p>Vue提供了特殊变量$event用于访问原生变量</p>
+  <a href="http://www.apple.com" @click="handleClick('禁止打开', $event)">打开链接</a>
+</div>
+<script src="../../assets/scripts/vue.min.js"></script>
+<script>
+  var app = new Vue({
+    el: '#app',
+    data: {
+      counter: 0
+    },
+    methods: {
+      handleClick: function(message, event) {
+        event.preventDefault()
+        window.alert(message)
+      }
+    }
+  })
+</script>
+</body>
+</html>
