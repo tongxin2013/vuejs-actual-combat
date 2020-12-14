@@ -9,5 +9,7 @@ Vue.js实战
    * [第4章 - v-bind及class与style绑定](chapter-baisc/chapter-4)
       * 4.2.3 在组件中使用 `第7章组件相关内容后补充`
    * [第5章 - 内置指令](chapter-baisc/chapter-5)
+      * 5.4.2 修饰符
+      * 5.5 实战：利用计算属性、指令等知识开发购物车
 * [第二篇 - 进阶篇](chapter-advance)
 * [第三篇 - 实战篇](chapter-combat)
