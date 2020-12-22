@@ -41,7 +41,7 @@ var app = new Vue({
       this.list[index].count++;
     },
     handleRemove: function (index) {
-      this.list[index].splice(index, 1);
+      this.list.splice(index, 1);
     }
   }
 })
