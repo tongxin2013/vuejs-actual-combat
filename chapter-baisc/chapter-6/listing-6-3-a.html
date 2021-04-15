@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>修饰符</title>
+</head>
+<body>
+<div id="app">
+  <p>.lazy</p>
+  <p>在输入框中，v-model默认是在input事件中同步输入框的数据（除了提示中文介绍的中文输入法情况外），使用修饰符.lazy会转变为在change事件中同步，失焦或按回车时才更新。</p>
+  <input type="text" v-model.lazy="message">
+  <p>{{ message }}</p>
+</div>
+<script src="../../assets/scripts/vue.min.js"></script>
+<script>
+  var app = new Vue({
+    el: '#app',
+    data: {
+      message: ''
+    }
+  })
+</script>
+</body>
+</html>

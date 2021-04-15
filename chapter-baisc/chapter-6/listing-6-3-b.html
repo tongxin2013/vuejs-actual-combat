@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>修饰符</title>
+</head>
+<body>
+<div id="app">
+  <p>.number</p>
+  <p>将输入转为number类型，否则虽然你输入的是数字，但他的类型其实是String，在数字输入框时会比较有用</p>
+  <input type="number" v-model.number="message">
+  <p>{{ typeof message }}</p>
+</div>
+<script src="../../assets/scripts/vue.min.js"></script>
+<script>
+  var app = new Vue({
+    el: '#app',
+    data: {
+      message: 123
+    }
+  })
+</script>
+</body>
+</html>
