@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>基础用法</title>
+</head>
+<body>
+<div id="app">
+  <p>&lt;option&gt;的v-for动态输出</p>
+  <select v-model="selected">
+    <option v-for="option in options" :value="option.value">{{ option.text }}</option>
+  </select>
+  <p>选择的是：{{ selected }}</p>
+</div>
+<script src="../../assets/scripts/vue.min.js"></script>
+<script>
+  var app = new Vue({
+    el: '#app',
+    data: {
+      options: [
+        {
+          text: 'HTML',
+          value: 'html'
+        },
+        {
+          text: 'JavaScript',
+          value: 'js'
+        },
+        {
+          text: 'CSS',
+          value: 'css'
+        }
+      ],
+      selected: 'html'
+    }
+  })
+</script>
+</body>
+</html>

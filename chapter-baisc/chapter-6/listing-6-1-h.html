@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>基础用法</title>
+</head>
+<body>
+<div id="app">
+  <select v-model="selected">
+    <option>html</option>
+    <option value="js">JavaScript</option>
+    <option>css</option>
+  </select>
+  <p>选择的是：{{ selected }}</p>
+  <p>&lt;option&gt;是备选项，如果含有value属性，v-model就会优先匹配value的值；如果没有，就会直接匹配&lt;option&gt;的text。</p>
+</div>
+<script src="../../assets/scripts/vue.min.js"></script>
+<script>
+  var app = new Vue({
+    el: '#app',
+    data: {
+      selected: 'html'
+    }
+  })
+</script>
+</body>
+</html>

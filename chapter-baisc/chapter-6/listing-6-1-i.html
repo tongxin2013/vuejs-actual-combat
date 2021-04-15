@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>基础用法</title>
+</head>
+<body>
+<div id="app">
+  <p>给&lt;select&gt;添加属性multiple鸠可以多选了，此时v-model绑定的是一个数组。</p>
+  <select v-model="selected" multiple>
+    <option>html</option>
+    <option value="js">JavaScript</option>
+    <option>css</option>
+  </select>
+  <p>选择的是：{{ selected }}</p>
+</div>
+<script src="../../assets/scripts/vue.min.js"></script>
+<script>
+  var app = new Vue({
+    el: '#app',
+    data: {
+      selected: ['html', 'js']
+    }
+  })
+</script>
+</body>
+</html>
