@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>基础用法</title>
+</head>
+<body>
+<div id="app">
+  <input type="checkbox" v-model="checked" value="html" id="html">
+  <label for="html">HTML</label>
+  <br>
+  <input type="checkbox" v-model="checked" value="js" id="js">
+  <label for="js">JS</label>
+  <br>
+  <input type="checkbox" v-model="checked" value="css" id="css">
+  <label for="css">CSS</label>
+  <br>
+  <p>选种的是：{{ checked }}</p>
+</div>
+<script src="../../assets/scripts/vue.min.js"></script>
+<script>
+  var app = new Vue({
+    el: '#app',
+    data: {
+      checked: ['html', 'css']
+    }
+  })
+</script>
+</body>
+</html>
