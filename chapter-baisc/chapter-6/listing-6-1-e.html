@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>基础用法</title>
+</head>
+<body>
+<div id="app">
+  <p>如果是组合使用来实现互斥选择的效果，就需要v-model配合value来使用</p>
+  <input type="radio" v-model="picked" value="html" id="html">
+  <label for="html">HTML</label>
+  <br>
+  <input type="radio" v-model="picked" value="js" id="js">
+  <label for="js">JS</label>
+  <br>
+  <input type="radio" v-model="picked" value="css" id="css">
+  <label for="css">CSS</label>
+  <br>
+  <p>选择的是：{{ picked }}</p>
+</div>
+<script src="../../assets/scripts/vue.min.js"></script>
+<script>
+  var app = new Vue({
+    el: '#app',
+    data: {
+      picked: 'js'
+    }
+  })
+</script>
+</body>
+</html>

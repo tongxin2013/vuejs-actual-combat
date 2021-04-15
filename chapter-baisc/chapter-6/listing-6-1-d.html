@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>基础用法</title>
+</head>
+<body>
+<div id="app">
+  <p>单选按钮在单独使用时，不需要v-model，直接适用v-bind绑定一个布尔值类型的值</p>
+  <input type="radio" :checked="picked">
+  <label>单选按钮</label>
+</div>
+<script src="../../assets/scripts/vue.min.js"></script>
+<script>
+  var app = new Vue({
+    el: '#app',
+    data: {
+      picked: true
+    }
+  })
+</script>
+</body>
+</html>
