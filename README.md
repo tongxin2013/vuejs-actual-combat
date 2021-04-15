@@ -14,7 +14,7 @@ Vue.js实战
    * [第5章 - 内置指令](chapter-baisc/chapter-5)
       * 5.4.2 修饰符
       * 5.5 实战：利用计算属性、指令等知识开发购物车
-   * [第6章 - 表单与v-model]()
+   * [第6章 - 表单与v-model](chapter-baisc/chapter-6)
       * 6.1 基础用法
       * 6.2 绑定值
       * 6.3 修饰符
