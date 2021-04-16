@@ -18,6 +18,8 @@ Vue.js实战
       * 6.1 基础用法
       * 6.2 绑定值
       * 6.3 修饰符
-   * [第7章 - 组件详解]()
+   * [第7章 - 组件详解](chapter-baisc/chapter-7)
+      * 7.1 组件与复用
+      * 7.2 使用props传递数据
 * [第二篇 - 进阶篇](chapter-advance)
 * [第三篇 - 实战篇](chapter-combat)
