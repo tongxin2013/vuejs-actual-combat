@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>组件通信</title>
+</head>
+<body>
+<div id="app">
+  <p>监听根元素的原生事件，使用 .native 修饰符</p>
+  <p>等同于子组件内部处理click事件然后向外发送click事件：$emit("click".fn)</p>
+  <my-component v-on:click.native="handleClick"></my-component>
+</div>
+<script src="../../assets/scripts/vue.min.js"></script>
+<script>
+  Vue.component('my-component', {
+    // 选项
+    template: '<div>这里是组件的内容</div>'
+  });
+
+  var app = new Vue({
+    el: '#app',
+    data: {
+      total: 0
+    },
+    methods: {
+      handleGetTotal: function (total) {
+        this.total = total
+      },
+      handleClick: function (e) {
+        console.log(e)
+      }
+    }
+  })
+</script>
+</body>
+</html>
