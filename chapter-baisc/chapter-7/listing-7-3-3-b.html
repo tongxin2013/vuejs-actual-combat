@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>非父子组件通信</title>
+</head>
+<body>
+<div id="app">
+  <button @click="handleBroadcast">派发事件</button>
+  <my-component></my-component>
+</div>
+<script src="../../assets/scripts/vue.1.0.9.js"></script>
+<script>
+  Vue.component('my-component', {
+    template: '<p>{{ msg }}</p>',
+    data() {
+      return {
+        msg: ''
+      }
+    },
+    events: {
+      'on-message': function (message) {
+        console.log(message)
+        this.msg = message;
+      }
+    }
+  });
+
+  var app = new Vue({
+    el: '#app',
+    methods: {
+      handleBroadcast: function () {
+        this.$broadcast('on-message', '来自父组件的数据')
+      }
+    }
+  })
+</script>
+</body>
+</html>

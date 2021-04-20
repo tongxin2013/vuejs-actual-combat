@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>非父子组件通信</title>
+</head>
+<body>
+<div id="app">
+  <p>B向A通信，在B中调用dispatch方法，在A中使用$on监听事件即可</p>
+  {{ message }}
+  <my-component></my-component>
+</div>
+<script src="../../assets/scripts/vue.1.0.9.js"></script>
+<script>
+  Vue.component('my-component', {
+    template: '<button @click="handleDispatch">派发事件</button>',
+    methods: {
+      handleDispatch: function () {
+        this.$dispatch('on-message', '来自内部组件的数据')
+      }
+    }
+  });
+
+  var app = new Vue({
+    el: '#app',
+    data: {
+      message: ''
+    },
+    events: {
+      'on-message': function (msg) {
+        this.message = msg;
+      }
+    }
+  })
+</script>
+</body>
+</html>
