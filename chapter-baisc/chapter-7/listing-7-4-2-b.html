@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>什么是slot</title>
+</head>
+<body>
+  <p>子组件模板的内容是在子组件作用域内编译</p>
+  <div id="app">
+    <child-component></child-component>
+  </div>
+
+<script src="../../assets/scripts/vue.min.js"></script>
+<script>
+  Vue.component('child-component', {
+    template: '<div v-show="showChild">子组件</div>',
+    data: function () {
+      return {
+        showChild: true
+      }
+    }
+  });
+
+  var app  = new Vue({
+    el: '#app'
+  })
+</script>
+</body>
+</html>
