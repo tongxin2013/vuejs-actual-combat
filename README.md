@@ -40,6 +40,9 @@ Vue.js实战
          * 7.5.3 动态组件
          * 7.5.4 异步组件
       * 7.6 其他
+         * 7.6.1 $nextTick
+         * 7.6.2 X-Templates
+         * 7.6.3 手动挂载实例
       * 7.7 实战：两个常用组件的开发
 * [第二篇 - 进阶篇](chapter-advance)
 * [第三篇 - 实战篇](chapter-combat)
