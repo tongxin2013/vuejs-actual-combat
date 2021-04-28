@@ -7,22 +7,21 @@
 <body>
   <div id="app">
     <my-component></my-component>
+
+    <script type="text/x-template" id="my-component">
+      <div>这是组件内容</div>
+    </script>
   </div>
 
-<script src="../../assets/scripts/vue.min.js"></script>
+  <script src="../../assets/scripts/vue.min.js"></script>
+  <script>
+    Vue.component('my-component', {
+      template: '#my-component'
+    })
 
-<script type="text/x-template" id="my-component">
-  <div>这是组件内容</div>
-</script>
-
-<script>
-  Vue.component('my-component', {
-    template: '#my-component'
-  })
-
-  var app = new Vue({
-    el: '#app'
-  })
-</script>
+    var app = new Vue({
+      el: '#app'
+    })
+  </script>
 </body>
 </html>
