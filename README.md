@@ -44,5 +44,7 @@ Vue.js实战
          * 7.6.2 X-Templates
          * 7.6.3 手动挂载实例
       * 7.7 实战：两个常用组件的开发
+         * [7.7.1 开发一个数字输入框组件](chapter-baisc/chapter-7/number)
+         * [7.7.2 开发一个标签页组件](chapter-baisc/chapter-7/tabs)
 * [第二篇 - 进阶篇](chapter-advance)
 * [第三篇 - 实战篇](chapter-combat)
