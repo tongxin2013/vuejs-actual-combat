@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>手动挂载实例</title>
+</head>
+<body>
+  <div id="mount-div">
+
+  </div>
+
+  <script src="../../assets/scripts/vue.min.js"></script>
+  <script>
+    var MyComponent = Vue.extend({
+      template: '<div>Hello: {{ name }}</div>',
+      data: function () {
+        return {
+          name: 'Aresn'
+        }
+      }
+    })
+    // 挂载方式1
+    new MyComponent().$mount('#mount-div')
+
+    // 挂载方式2
+    // new MyComponent({
+    //   el: '#mount-div'
+    // })
+
+    // 挂载方式3 在文档外渲染并随后挂载
+    // var component = new MyComponent().$mount();
+    // document.getElementById('mount-div').appendChild(component.$el);
+  </script>
+</body>
+</html>
