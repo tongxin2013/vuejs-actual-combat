@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>基本用法</title>
+</head>
+<body>
+
+<script src="../../assets/scripts/vue.min.js"></script>
+<script>
+  Vue.directive('focus', {
+    // 指令选项
+  });
+
+  var app = new Vue({
+    el: '#app',
+    directives: {
+      focus: {
+        // 指令选项
+      }
+    }
+  })
+</script>
+</body>
+</html>
