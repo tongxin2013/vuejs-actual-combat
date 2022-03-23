@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>基本用法</title>
+</head>
+<body>
+  <div id="app">
+    <div v-test:msg.a.b="message"></div>
+  </div>
+</body>
+<script src="../../assets/scripts/vue.min.js"></script>
+<script>
+  Vue.directive('test', {
+    bind: function (el, binding, vnode) {
+      var keys = [];
+      for (var i in vnode) {
+        keys.push(i);
+      }
+      console.log(keys)
+      el.innerHTML = 'name: ' + binding.name + '<br>' +
+      'value: ' + binding.value + '<br>' +
+      'expression: ' + binding.expression + '<br>' +
+      'argument: ' + binding.arg + '<br>' +
+      'modifiers: ' + JSON.stringify(binding.modifiers) + '<br>' +
+      'vnode keys: ' + keys.join(', ')
+    }
+  });
+
+  var app = new Vue({
+    el: '#app',
+    data: {
+      message: 'some text'
+    }
+  })
+</script>
+</html>
