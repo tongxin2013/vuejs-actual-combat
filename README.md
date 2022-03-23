@@ -10,7 +10,12 @@ Vue.js实战
    * [第3章 - 计算属性](chapter-basic/chapter-3)
       * 3.3 计算属性缓存
    * [第4章 - v-bind及class与style绑定](chapter-basic/chapter-4)
-      * 4.2.3 在组件中使用 `第7章组件相关内容后补充`
+      * 4.1 了解v-bind指令
+      * 4.2 绑定class的几种方式
+         * 4.2.1 对象语法
+         * 4.2.2 数组语法
+         * 4.2.3 在组件中使用 `第7章组件相关内容后补充`
+      * 4.3 绑定内联样式
    * [第5章 - 内置指令](chapter-basic/chapter-5)
       * 5.4.2 修饰符
       * [5.5 实战：利用计算属性、指令等知识开发购物车](chapter-basic/chapter-5/shopping-cart)
