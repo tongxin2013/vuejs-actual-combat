@@ -55,5 +55,6 @@ Vue.js实战
       * 8.1 基本用法
       * 8.2 实战
          * [8.2.1 开发一个可从外部关闭的下拉菜单](chapter-basic/chapter-8/menu)
+         * [8.2.2 开发一个实时时间转换指令v-time](chapter-basic/chapter-8/time)
 * [第二篇 - 进阶篇](chapter-advance)
 * [第三篇 - 实战篇](chapter-combat)
